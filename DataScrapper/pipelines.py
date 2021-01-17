@@ -40,7 +40,6 @@ class CustomImages(ImagesPipeline):
 
 
     def file_path(self, request, response=None, info=None, *, item=None):
-        print("inside custom")
         folder = request.meta['site']
         img = request.meta['file_name']
         absolute = os.path.abspath(os.path.join('\\',IMAGES_STORE, f'{folder}', img))
